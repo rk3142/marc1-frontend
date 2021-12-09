@@ -1,0 +1,23 @@
+:root {
+    --font-size-10px: 0.50rem;
+    --font-size-11px: 0.60rem;
+    --font-size-12px: 0.70rem;
+    --font-size-13px: 0.75rem;
+    --font-size-14px: 0.78rem;
+    --font-size-15px: 0.80rem;
+    --font-size-16px: 0.85rem;
+    --font-size-17px: 1rem;
+    --font-size-18px: 1.10rem;
+    --font-size-20px: 1.30rem;
+    --font-size-21px: 1.40rem;
+    --font-size-22px: 1.50rem;
+    --font-size-28px: 2.00rem;
+    /* --font-size-17px: 4.55vmin; */
+    /* --font-size-18px: 4.8vmin; */
+    /* --font-size-20px: 5.35vmin; */
+    --padding-20px: 5.35vmin;
+    --padding-30px: 8.0vmin;
+    --height-50px: 13.33vmin;
+    --height-60px: 8.2vh;
+    
+    }

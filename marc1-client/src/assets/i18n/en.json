@@ -1,0 +1,10 @@
+{
+  "languageMap": {
+    "REGISTER_HEADING": "Unlimited Data Storage",
+    "REGISTER_SUB_HEADING": "To save unlimited data, click on 'Register'",
+    "REGISTER": "Register",
+    "LOADING": "Loading",
+    "SUCCESS_MSG": "Your request has been successfully processed.",
+    "NETWORK_ERROR": "There is some technical error",
+  }
+}

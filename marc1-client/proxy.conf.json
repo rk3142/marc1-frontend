@@ -1,0 +1,12 @@
+{
+	"/test": {
+	  "target": "http://formhoster-env-1.eba-v8gea4pu.us-east-2.elasticbeanstalk.com/",
+	  "secure": false,
+	  "changeOrigin": true,
+	  "logLevel": "debug",
+	  "pathRewrite": {
+		"^/test": ""
+	  }
+	}
+  }
+  
