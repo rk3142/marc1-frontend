@@ -1,1 +1,144 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/css/variables.css";
+@import "~bootstrap/dist/css/bootstrap-reboot.min.css";
+@import "~bootstrap/dist/css/bootstrap-grid.min.css";
+
+@font-face {
+  font-family: "Nunito-Regular";
+  font-display: swap;
+  src: url("assets/fonts/Nunito-Regular.woff");
+}
+
+@font-face {
+  font-family: "Nunito-SemiBold";
+  font-display: swap;
+  src: url("assets/fonts/Nunito-SemiBold.woff");
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  font-display: swap;
+  src: url("assets/fonts/Nunito-Bold.woff");
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 17px !important;
+}
+input,
+select {
+  font-size: 100%;
+}
+
+body {
+  font-size: var(--font-size-11px);
+  margin: 0 !important;
+  background-color: #f1f0f5 !important;
+  font-family: "Nunito-Regular", sans-serif !important;
+  /* position: relative; */
+  /* scrollbar-width: thin;
+    scrollbar-color: #262626 black; */
+}
+
+.app-container {
+  background-color: #f1f0f5;
+  padding: 40px;
+  height: 100vh;
+  font-size: var(--font-size-14px);
+  overflow: hidden;
+  /* position: relative; */
+}
+
+button {
+  user-select: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+.app-btn,
+.app-btn:active,
+.app-btn:focus,
+.app-btn.active,
+.app-btn:active:focus {
+  border-radius: 5px !important;
+  padding: 5px 15px !important;
+  text-transform: capitalize !important;
+  font-size: var(--font-size-16px);
+  font-family: "Nunito-Bold", sans-serif !important;
+  color: white !important;
+  border: solid 3px transparent !important;
+  box-shadow: none !important;
+  background: #0c75ff !important;
+  /* box-shadow: 0px 1000px 1px #0c75ff inset; */
+}
+
+.main-div {
+  background-color: #f1f0f5;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.main-img {
+  width: 40%;
+  height: 100%;
+}
+
+.container-div {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  font-family: "Nunito-Bold", sans-serif;
+}
+
+.mat-snack-bar-container {
+  background: grey !important;
+  color: white !important;
+}
+
+.mat-simple-snackbar {
+  font-family: "Nunito-Regular", sans-serif !important;
+  justify-content: center !important;
+}
+
+.cdk-overlay-container {
+  z-index: 10051 !important;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home-container {
+  text-align: right;
+  padding: 5px 15px;
+  font-size: 14px;
+}
+
+.span-text {
+  margin: 5px;
+  text-decoration: underline;
+  color: #0c75ff;
+  cursor: pointer;
+}
+
+.add-container {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  font-family: "Nunito-Bold", sans-serif;
+  padding: 10px;
+}

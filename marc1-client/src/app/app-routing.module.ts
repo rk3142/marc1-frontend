@@ -1,16 +1,33 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth-guard';
 
 const routes: Routes = [
   {
     path: 'register',
     loadChildren: () =>
       import('./register/register.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'addTemplate',
+    loadChildren: () =>
+      import('./add-template/add-template.module').then(
+        (m) => m.AddTemplateModule
+      ),
+    canActivate: [AuthGuard],
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      useHash: true,
+      onSameUrlNavigation: 'reload',
+      scrollPositionRestoration: 'enabled',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  public constructor(private router: Router) {}
+}

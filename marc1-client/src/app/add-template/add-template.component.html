@@ -1,1 +1,18 @@
-<p>add-template works!</p>
+<div class="add-container">
+	<app-header [type]="1"></app-header>
+	<div class="top-container">
+	  <button class="app-btn" (click)="onAddClick()">
+		{{ "languageMap.CREATE_TEMPLATE" | translate }}
+	  </button>
+	  <button class="app-btn" style="margin-left: 20px" (click)="onViewClick()">
+		{{ "languageMap.VIEW_TEMPLATE" | translate }}
+	  </button>
+	  <img
+		title="Refresh"
+		src="../../assets/icons/refresh.png"
+		class="refreh-img"
+		(click)="clearData()"
+	  />
+	</div>
+  </div>
+  
