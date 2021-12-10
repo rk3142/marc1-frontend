@@ -11,8 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TransModuleModule } from './Modules/lang-trans/lang-trans.module';
+import { EditTemplateComponent } from './edit-template/edit-template.component';
+import { UserDataComponent } from './user-data/user-data.component';
+import { ViewTemplateComponent } from './view-template/view-template.component';
+import { ViewUserDataComponent } from './view-user-data/view-user-data.component';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, EditTemplateComponent, UserDataComponent, ViewTemplateComponent, ViewUserDataComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
