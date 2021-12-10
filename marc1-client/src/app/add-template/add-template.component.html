@@ -14,5 +14,87 @@
 		(click)="clearData()"
 	  />
 	</div>
+	<ng-container *ngIf="showTemplate">
+	  <div class="form-main-div">
+		<form name="form" (ngSubmit)="(f.form.valid)" #f="ngForm" novalidate>
+		  <ng-container *ngFor="let item of fieldDataList; let i = index">
+			<div class="form-group row form-row">
+			  <div class="col-sm-3 col-md-3 col-lg-3">
+				<label class="form-label">{{
+				  "languageMap.FIELD_NAME" | translate
+				}}</label>
+				<input
+				  type="text"
+				  id="fname"
+				  name="fname{{ i }}"
+				  #fname="ngModel"
+				  [(ngModel)]="item.field_name"
+				  class="form-control"
+				  required
+				/>
+			  </div>
+			  <div class="col-sm-3 col-md-3 col-lg-3">
+				<label class="form-label">{{
+				  "languageMap.EXPECTED_VALUES" | translate
+				}}</label>
+				<input
+				  type="text"
+				  id="values"
+				  name="values{{ i }}"
+				  #values="ngModel"
+				  [(ngModel)]="item.expected_values"
+				  class="form-control"
+				/>
+			  </div>
+			  <div class="col-sm-3 col-md-3 col-lg-3">
+				<label class="form-label">{{
+				  "languageMap.FIELD_TYPE" | translate
+				}}</label>
+				<select
+				  class="form-select"
+				  id="type-select{{ i }}"
+				  [(ngModel)]="item.fieldType"
+				  name="type-select-{{ i }}"
+				  (change)="onTypeChange(i)"
+				>
+				  <option
+					*ngFor="let type of dataTypes"
+					[ngValue]="type"
+					selected
+				  >
+					{{ type.name }}
+				  </option>
+				</select>
+			  </div>
+			  <div class="col-sm-2 col-md-2 col-lg-2 form-column">
+				<img
+				  id="add{{ i }}"
+				  *ngIf="i === fieldDataList.length - 1"
+				  src="../../assets/icons/plus.png"
+				  class="form-add-img"
+				  (click)="addMorField(i)"
+				/>
+				<img
+				  id="delete{{ i }}"
+				  *ngIf="i !== fieldDataList.length - 1"
+				  src="../../assets/icons/delete_dark.png"
+				  class="form-delete-img"
+				  (click)="deleteField(i)"
+				/>
+			  </div>
+			</div>
+		  </ng-container>
+		  <button
+			type="submit"
+			style="margin-top: 40px"
+			class="app-btn"
+			(click)="saveTemplate()"
+			[disabled]="!f.form.valid"
+		  >
+			{{ "languageMap.ADD_TEMPLATE" | translate }}
+		  </button>
+		</form>
+	  </div>
+	</ng-container>
   </div>
   

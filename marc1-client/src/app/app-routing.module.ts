@@ -15,6 +15,22 @@ const routes: Routes = [
         (m) => m.AddTemplateModule
       ),
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'viewUserData',
+    loadChildren: () =>
+      import('./view-user-data/view-user-data.module').then(
+        (m) => m.ViewUserDataModule
+      ),
+    // canActivate: [AuthGuard],
+  },
+  {
+    path: 'viewTemplate',
+    loadChildren: () =>
+      import('./view-template/view-template.module').then(
+        (m) => m.ViewTemplateModule
+      ),
+    canActivate: [AuthGuard],
   }
 ];
 

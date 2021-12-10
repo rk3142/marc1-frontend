@@ -1,1 +1,46 @@
-<p>view-template works!</p>
+<div class="add-container">
+	<app-header></app-header>
+	<ng-container *ngIf="formList && formList.length > 0; else noDataTemplate">
+	  <table class="table table-striped" style="margin-top: 20px">
+		<thead>
+		  <tr>
+			<th scope="col">#</th>
+			<th scope="col">Template Name</th>
+			<th scope="col">Action</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr *ngFor="let item of formList; index as i">
+			<th scope="row">{{ i + 1 }}</th>
+			<td>
+			  {{ item.name }}
+			</td>
+			<td style="text-align: center !important">
+			  <img
+				title="Set User Data"
+				src="../../assets/icons/plus.png"
+				class="form-view-img"
+				(click)="addUserData(i)"
+			  />
+			  <img
+				title="View User Data"
+				src="../../assets/icons/view.png"
+				class="form-view-img"
+				(click)="viewTemplateData(i)"
+			  />
+			  <img
+				title="Edit"
+				src="../../assets/icons/edit.png"
+				class="form-edit-img"
+				(click)="editTemplateData(i)"
+			  />
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</ng-container>
+	<ng-template #noDataTemplate>
+	  <div>No Data Available</div>
+	</ng-template>
+  </div>
+  

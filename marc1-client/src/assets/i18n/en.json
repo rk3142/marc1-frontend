@@ -6,5 +6,15 @@
     "LOADING": "Loading",
     "SUCCESS_MSG": "Your request has been successfully processed.",
     "NETWORK_ERROR": "There is some technical error",
+    "ADD_TEMPLATE": "Add Template",
+    "FIELD_NAME": "Field Name",
+    "FIELD_TYPE": "Field Type",
+    "FIELD_REQUIRED": "Field is required",
+    "EXPECTED_VALUES": "Expected Values",
+    "VIEW_TEMPLATE": "View Templates",
+    "CREATE_TEMPLATE": "Create Template",
+    "SAVE": "Save",
+    "USERDATA_HEADER": "Save User Data",
+    "SAVE_DATA_MSG": "Your data has been saved successfully."
   }
 }

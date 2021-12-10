@@ -1,1 +1,35 @@
-<p>view-user-data works!</p>
+<div class="add-container">
+	<!-- <app-header></app-header> -->
+	<ng-container
+	  *ngIf="userDataList && userDataList.length > 0; else noDataTemplate"
+	>
+	  <table class="table table-striped" style="margin-top: 20px">
+		<thead>
+		  <tr>
+			<th scope="col">#</th>
+			<ng-container
+			  *ngFor="let item of userDataList[0].templateData | keyvalue"
+			>
+			  <th scope="col" *ngIf="item.key !== 'response_id'">
+				{{ item.key }}
+			  </th>
+			</ng-container>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr *ngFor="let item of userDataList; index as i">
+			<td>
+			  {{ item.name }}
+			</td>
+			<ng-container *ngFor="let data of item.templateData | keyvalue">
+			  <td *ngIf="data.key !== 'response_id'">{{ data.value }}</td>
+			</ng-container>
+		  </tr>
+		</tbody>
+	  </table>
+	</ng-container>
+	<ng-template #noDataTemplate>
+	  <div>No Data Available</div>
+	</ng-template>
+  </div>
+  
