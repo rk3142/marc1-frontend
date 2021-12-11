@@ -1,1 +1,44 @@
-<p>user-data works!</p>
+<div class="add-container">
+	<!-- <app-header></app-header> -->
+	<div class="top-container">
+	  {{ "languageMap.USERDATA_HEADER" | translate }}
+	</div>
+	<ng-container *ngIf="showTemplate; else noDataTemplate">
+	  <div class="form-main-div">
+		<form name="form" (ngSubmit)="(f.form.valid)" #f="ngForm" novalidate>
+		  <ng-container *ngFor="let item of fieldDataList; let i = index">
+			<div class="form-group row form-row">
+			  <div class="col-sm-2 col-md-2 col-lg-2">
+				<label class="form-label">{{ item.field_name }}:</label>
+			  </div>
+			  <div class="col-sm-6 col-md-6 col-lg-6">
+				<input
+				  [disabled]="disableField"
+				  type="text"
+				  id="value"
+				  name="value-{{ i }}"
+				  #values="ngModel"
+				  [(ngModel)]="item.field_value"
+				  class="form-control"
+				  required
+				/>
+			  </div>
+			</div>
+		  </ng-container>
+		  <button
+			type="submit"
+			style="margin-top: 40px"
+			class="app-btn"
+			(click)="saveUserData()"
+			[disabled]="!f.form.valid"
+		  >
+			{{ "languageMap.SAVE" | translate }}
+		  </button>
+		</form>
+	  </div>
+	</ng-container>
+	<ng-template #noDataTemplate>
+	  <div>No Data Available</div>
+	</ng-template>
+  </div>
+  

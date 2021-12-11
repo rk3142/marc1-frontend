@@ -1,0 +1,49 @@
+.form-main-div {
+	margin: 40px auto 20px auto;
+	align-items: flex-start;
+	justify-content: center;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	padding: 20px;
+	width: 95%;
+	box-shadow: 0px 1000px 1px white inset;
+	overflow: auto;
+	height: calc(100% - 100px);
+  }
+  
+  .form-row {
+	align-items: flex-end;
+	margin-bottom: 10px;
+  }
+  
+  .form-column {
+	padding-bottom: 6px;
+	align-self: flex-end;
+	text-align: left;
+  }
+  
+  .form-label {
+	width: 100%;
+	text-align: left;
+	font-size: 12px;
+  }
+  
+  .form-select {
+	width: 100%;
+	display: block;
+	height: 36px;
+	padding: 0px 10px;
+  }
+  
+  .form-add-img {
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+	cursor: pointer;
+  }
+  .form-delete-img {
+	width: 15px;
+	height: 18px;
+	cursor: pointer;
+  }
+  

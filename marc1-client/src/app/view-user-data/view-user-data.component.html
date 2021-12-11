@@ -8,7 +8,7 @@
 		  <tr>
 			<th scope="col">#</th>
 			<ng-container
-			  *ngFor="let item of userDataList[0].templateData | keyvalue"
+			  *ngFor="let item of userDataList[userDataList.length-1].templateData | keyvalue"
 			>
 			  <th scope="col" *ngIf="item.key !== 'response_id'">
 				{{ item.key }}

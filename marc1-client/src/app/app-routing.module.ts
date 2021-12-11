@@ -31,7 +31,23 @@ const routes: Routes = [
         (m) => m.ViewTemplateModule
       ),
     canActivate: [AuthGuard],
-  }
+  },
+  {
+    path: 'editTemplate',
+    loadChildren: () =>
+      import('./edit-template/edit-template.module').then(
+        (m) => m.EditTemplateModule
+      ),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'userData',
+    loadChildren: () =>
+      import('./user-data/user-data.module').then((m) => m.UserDataModule),
+    // canActivate: [AuthGuard],
+  },
+  { path: '', redirectTo: 'register', pathMatch: 'full' },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
