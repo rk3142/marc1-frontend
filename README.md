@@ -1,6 +1,12 @@
 # marc1-frontend
 
 
+## PRE-REQUISITE
+
+Create an Angular Development Environment
+
+https://jasonwatmore.com/post/2020/06/02/angular-setup-development-environment
+
 Clone the git repo
 
 ```
